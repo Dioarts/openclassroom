@@ -1,0 +1,22 @@
+<div class="header-container">
+    <div class="header">
+        <?php if ($this->getIsHomePage()):?>
+        <class="logo"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+        <?php else:?>
+		        <class="logo"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+		<?php endif?>
+		<img class="gaston" src="<?php echo $this->getSkinUrl('images/bg_gaston.png') ?>" alt="Gaston" />
+		<div class="quick-infos">
+			<div class="cms-block-top">
+				<?php echo $this->getChildHtml('cms_header') ?>
+			</div>
+			<?php echo $this->getChildHtml('topSearch') ?>
+		</div>
+        <div class="quick-access">
+            <?php echo $this->getChildHtml('store_language') ?>
+            <?php echo $this->getChildHtml('topLinks') ?>
+        </div>
+        <?php echo $this->getChildHtml('topContainer'); ?>
+    </div>
+</div>
+<?php echo $this->getChildHtml('topMenu') ?>
